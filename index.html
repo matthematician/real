@@ -3,18 +3,25 @@
   <head>
        <script language="javascript">
        // const fs = require(["fs"]);
-      
+       function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+         
        function addingImages() {
         for (var i = 1; i <= 30; i++) {
-        // if(fs.existsSync('tweets/'+i+'.png')){
-           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.png" width="800"/><br>\n';
-        // }
+         if(UrlExists('tweets/'+i+'.png')){
+           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.png" width="600"/><br>\n';
+         }
    }
 }
     </script>
   </head>
   <body onload="addingImages()" style="background-color:black; width:100%;">
-    <div id="tweets" style="width:800px; display:block; height:auto; clear:both; margin-left:auto; margin-right:auto;">
+    <div id="tweets" style="width:600px; display:block; height:auto; clear:both; margin-left:auto; margin-right:auto;">
     </div>
   </body>
 </html>
