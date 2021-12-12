@@ -1,21 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <script language="javascript">
-       const fs = require("fs");
+       <script language="javascript">
+       // const fs = require(["fs"]);
       
        function addingImages() {
         for (var i = 1; i <= 30; i++) {
-        if(!fs.existsSync('tweets/'+i+'.jpg'){
-           break;
-        }else{
-           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.jpg" width=800/><br>\n';
-        }
+        // if(fs.existsSync('tweets/'+i+'.png')){
+           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.png" width="800"/><br>\n';
+        // }
    }
 }
     </script>
   </head>
-  <body style="background-color:000; width:100%;">
-    <div id="tweets" onload=javascript:addingImages()" style="width:800px; height:auto; clear:both; margin-left:auto; margin-right:auto;">
+  <body onload="addingImages()" style="background-color:black; width:100%;">
+    <div id="tweets" style="width:800px; display:block; height:auto; clear:both; margin-left:auto; margin-right:auto;">
     </div>
   </body>
 </html>
