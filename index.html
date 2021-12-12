@@ -2,13 +2,13 @@
   <head>
     <script  src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
     <script language="javascript">
-       const fs = require(["fs"]);
+       // const fs = require(["fs"]);
       
        function addingImages() {
         for (var i = 1; i <= 30; i++) {
-        if(fs.existsSync('tweets/'+i+'.png')){
+        // if(fs.existsSync('tweets/'+i+'.png')){
            document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.jpg" width="800"/><br>\n';
-        }
+        // }
    }
 }
     </script>
