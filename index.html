@@ -5,10 +5,8 @@
       
        function addingImages() {
         for (var i = 1; i <= 30; i++) {
-        if(!fs.existsSync('tweets/'+i+'.png')){
-           break;
-        }else{
-           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.jpg" width=800/><br>\n';
+        if(fs.existsSync('tweets/'+i+'.png')){
+           document.getElementById('tweets').innerHTML += '<img src="tweets/'+i+'.jpg" width="800"/><br>\n';
         }
    }
 }
